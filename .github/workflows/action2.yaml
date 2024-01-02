@@ -9,5 +9,7 @@ jobs:
               run: echo $HELLO
               env: 
                 HELLO: luiz-felipe
-            - name: Echo some more
+            - name: Echo secrets
               run: echo ${{ secrets.SECRET_1 }}
+            - name: Echo variables
+              run: echo $VARIABLE_1
