@@ -1,0 +1,13 @@
+name: action-number-2
+run-name: This is the run name
+on: [push]
+jobs: 
+    echo-some-vars:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Configure environment
+              run: echo $HELLO
+              env: 
+                HELLO: luiz-felipe
+            - name: Echo some more
+              run: echo ${{ secrets.SECRET_1 }}
